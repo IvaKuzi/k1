@@ -2,24 +2,65 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Ivans Website</title>
+  <title>Click Responses</title>
+  <!--script>
+    function sendHttpRequest() {
+      var url = 'https://hook.eu2.make.com/chryykerh0xj2slgfyq6nrrga8475a83';
+
+      alert("Http request sent to " + url);
+
+      fetch(url);
+    }
+    function sendEmail(email = 'fn1.kiberone@gmail.com') {
+      var url = "https://script.google.com/macros/s/AKfycbwGfZ8-55P934Qj8nR7LNh354ZByqRI19_DO5H71Mqa_b-ytQ262sqvtkfwdobFxEf-/exec";
+      //var email = "bassclef@mail.ru"
+
+      alert("Email sent from your gmail account to " + email);
+      
+      fetch(url + "?q=" + JSON.stringify([
+        email,
+        "Subject",
+        `Message`
+      ])).then(() => {
+        // here you can let the user know their contact was received
+      });
+    }
+  </script-->
+  <script src="script.js" type="text/javascript"></script>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <h1>Hello world</h1>
-  <a href="https://www.google.com">Google</a>
-  <p/>
-  <script src="script.js"></script>
 
-  <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+  <a href='https://ask.replit.com/t/how-do-i-make-a-website-send-a-message/29996/5'>How do I make a website send a
+    message</a>
+  <p />
+  <h2 id='date'>Current time to be here</h2>
+  <p />
+  <button type="button" onclick="document.getElementById('date').innerHTML = Date()">Click to get current time</button>
+  <p />
+  <button type="button" onclick="sendHttpRequest()">Click to send http request to make.com</button>
+  <p />
+  <button type="button" onclick="sendEmail()">Click to send email</button>
+  <p />
+  <form action="JavaScript:sendEmail(fname.value)">
+    <label for="fname">Email:</label><br>
+    <input type="text" id="fname" name="fname" value="fn1.kiberone@gmail.com"><br>
+    <input type="submit" value="Send">
+  </form>
+  <!--img src="https://hook.eu2.make.com/chryykerh0xj2slgfyq6nrrga8475a83" width="1" height="1" /-->
+
+
+  <h1>The div element</h1>
+
+  <div class="myDiv">
+    <h2>This is a heading in a div element</h2>
+    <p>This is some text in a div element.</p>
+  </div>
+
+  <p>This is some text outside the div element.</p>
+
+
 </body>
 
 </html>
